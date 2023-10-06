@@ -27,13 +27,11 @@ public class Main {
         System.out.println(Arrays.toString(digits));
 
         //hw_2
-        int[] integers = {8, -2, -4, 2, 3, 6, -7};
+        double sumOfPositiveDigits = 0;
+        double indexOfNegativeDigit = 0;
+        double countOfPositiveDigits = 0;
 
-        int sumOfPositiveDigits = 0;
-        int indexOfNegativeDigit = 0;
-        int countOfPositiveDigits = 0;
-
-        for (int integer : integers) {
+        for (double integer : digits) {
             if (indexOfNegativeDigit > 0) {
                 if (integer > 0) {
                     sumOfPositiveDigits += integer;
@@ -46,10 +44,10 @@ public class Main {
             }
         }
 
-        System.out.println(Arrays.toString(integers) + " = " + sumOfPositiveDigits + "/" + countOfPositiveDigits);
+        System.out.println(Arrays.toString(digits) + " = " + sumOfPositiveDigits + "/" + countOfPositiveDigits);
         System.out.println("____________________");
         //hw_3
-        int[] integers2 = {8, -2, -4, 6, 3, 2, -7};
+        double[] integers2 = digits;
 
 
         for (int i = 0; i < integers2.length - 1; i++) {
@@ -60,7 +58,7 @@ public class Main {
                 }
             }
             System.out.println(Arrays.toString(integers2));
-            int currentInt = integers2[i];
+            double currentInt = integers2[i];
             integers2[i] = integers2[minIntIndex];
             integers2[minIntIndex] = currentInt;
         }
